@@ -1,0 +1,47 @@
+
+<div class="page-header text-center">
+    <h1>Register a Contact</h1>
+</div>
+
+<p ng-show="message.length" class="alert alert-info">{{message}}</p>
+
+<form novalidate name="formContact" class="row" ng-submit="submitForm()">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Name</label>
+            <input name="name" class="form-control" ng-model="contact.name" required>  
+
+            <span ng-show = "formContact.$submitted && formContact.name.$error.required"class="form-control alert-danger">
+                Name required.
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label>Avatar (url)</label>
+            <input name="avatar" class="form-control" ng-model="contact.avatar" required>
+
+            <span ng-show = "formContact.$submitted && formContact.avatar.$error.required" class="form-control alert-danger">
+                A image url is necessary.
+            </span> 
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input name="phone_number" class="form-control" ng-model="contact.phone_number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Email</label>
+            <input name="email" class="form-control" ng-model="contact.email" required>
+        </div>
+            
+        <button type="submit" class="btn btn-primary" ng-disabled="formContact.$invalid">
+            Save
+        </button>
+        <a href="/" class="btn btn-primary">Return</a>
+        <hr>
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive center-block" src="{{contact.avatar}}" alt="{{contact.name}}">
+    </div>
+</form>

@@ -1,0 +1,16 @@
+<li class="list-group-item">
+    <div class="row">
+        <div class="col-xs-3 col-sm-1">
+            <img src="{{contact.avatar}}" alt="{{contact.name}}" class="img-responsive img-circle" />
+        </div>
+        <div class="col-xs-7 col-sm-9">
+            <span class="name">{{contact.name}}</span><br/>
+            <span class="email">{{contact.email}}</span><br/>
+            <span class="phone_number">{{contact.phone_number}}</span><br/>
+        </div>
+        <div class="col-xs-2 col-sm-2 text-right">
+            <a class="btn btn-primary btn-xs btn-xs-block" href="/contact/edit/{{contact._id}}"><i class="far fa-edit"></i></a>
+            <button ng-click="removeContact(contact)" class="btn btn-danger btn-xs btn-xs-block"><i class="fas fa-user-times"></i></button>
+        </div>
+    </div>
+</li>

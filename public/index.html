@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<base href="/">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+
+		<title>TransferWise - Contact Search</title>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-animate.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/lib/angular-resource.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+            <ng-view></ng-view>    
+		</div>
+
+		<script src="js/main.js"></script>
+		<script src="js/controllers/contacts-controller.js"></script>
+		<script src="js/controllers/contact-controller.js"></script>
+		<script src="js/directives/my-directives.js"></script>
+        <script src="js/services/my-service.js"></script>
+    </body>
+</html>
